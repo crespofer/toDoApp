@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrl: './to-do-dashboard.component.css'
 })
 export class ToDoDashboardComponent {
+  // this will hold an array of tasks
+  tasks: string[] = []; // making a string setting it to empty for user to put in
+
+  // this will hold the value of the new tasks in the input field
+  newTask: string = '';
+
+  // will add the new task to the task array
+  addTask()
+  {
+    // check if new task string is not empty or just spaces
+    if(this.newTask.trim()) 
+    {
+      // if after removing spaces, there is still value then push to array
+      this.tasks.push(this.newTask);
+
+      this.newTask = ''; // clear input field
+    }
+  }
 
 }
