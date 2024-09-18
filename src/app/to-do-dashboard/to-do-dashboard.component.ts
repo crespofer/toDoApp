@@ -25,4 +25,10 @@ export class ToDoDashboardComponent {
     }
   }
 
+  // Will remove a task
+  removeTask(index: number)
+  {
+    this.tasks.splice(index,1);
+  }
+
 }
